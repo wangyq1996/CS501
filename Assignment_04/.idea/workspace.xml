@@ -18,6 +18,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -41,7 +42,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LinearEquation">
+  <component name="RunManager" selected="Application.IntersectingPoint">
+    <configuration name="IntersectingPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="IntersectingPoint" />
+      <module name="Assignment_04" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LinearEquation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LinearEquation" />
       <module name="Assignment_04" />
@@ -59,9 +67,11 @@
     <list>
       <item itemvalue="Application.LinearEquation" />
       <item itemvalue="Application.Rectangle" />
+      <item itemvalue="Application.IntersectingPoint" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IntersectingPoint" />
         <item itemvalue="Application.LinearEquation" />
         <item itemvalue="Application.Rectangle" />
       </list>
@@ -77,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582250667270</updated>
-      <workItem from="1582250668614" duration="8110000" />
+      <workItem from="1582250668614" duration="12910000" />
     </task>
     <servers />
   </component>

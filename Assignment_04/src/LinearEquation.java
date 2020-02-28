@@ -70,7 +70,7 @@ public class LinearEquation {
             LinearEquation test = new LinearEquation(in[0],in[1],in[2],in[3],in[4],in[5]);
             while(true){
                 System.out.println("Show one parameter (from a to f), type con to continue");
-                String t = input.nextLine();
+                String t = input.next();
                 if(t.equals("con")) break;
                 else if(t.equals("a")) System.out.println(test.getA());
                 else if(t.equals("b")) System.out.println(test.getB());
@@ -94,6 +94,7 @@ public class LinearEquation {
                     break;
                 }
             }
-        }else System.out.println("Program Closed");
+        }
+        System.out.println("Program Closed");
     }
 }
