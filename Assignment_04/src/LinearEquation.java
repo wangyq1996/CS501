@@ -82,7 +82,7 @@ public class LinearEquation {
             }
             while(true){
                 System.out.println("Show output (x or y), type e to exit");
-                String output = input.nextLine();
+                String output = input.next();
                 if(output.equals("e")) break;
                 try{
                     if(!test.isSolvable()) throw new Exception();

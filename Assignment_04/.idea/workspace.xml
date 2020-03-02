@@ -42,7 +42,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.IntersectingPoint">
+  <component name="RunManager" selected="Application.Calender">
+    <configuration name="Calender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Calender" />
+      <module name="Assignment_04" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IntersectingPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="IntersectingPoint" />
       <module name="Assignment_04" />
@@ -68,12 +75,14 @@
       <item itemvalue="Application.LinearEquation" />
       <item itemvalue="Application.Rectangle" />
       <item itemvalue="Application.IntersectingPoint" />
+      <item itemvalue="Application.Calender" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.IntersectingPoint" />
-        <item itemvalue="Application.LinearEquation" />
+        <item itemvalue="Application.Calender" />
         <item itemvalue="Application.Rectangle" />
+        <item itemvalue="Application.LinearEquation" />
+        <item itemvalue="Application.IntersectingPoint" />
       </list>
     </recent_temporary>
   </component>
