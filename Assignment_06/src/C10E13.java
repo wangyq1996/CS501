@@ -12,6 +12,13 @@ public class C10E13 {
             this.height = 1;
         }
 
+        public MyRectangle2D(double x,double y, double w,double h){
+            this.x = x;
+            this.y = y;
+            this.width = w;
+            this.height = h;
+        }
+
         public void setX(double x){this.x = x;}
 
         public void setY(double y){this.y = y;}
