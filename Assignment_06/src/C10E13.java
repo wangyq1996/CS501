@@ -48,7 +48,7 @@ class MyRectangle2D{
     public double getPerimeter(){return 2*(this.width+this.height);}
 
     public boolean contains(double x,double y){
-        if(Math.abs(x-this.x)<this.width/2 && Math.abs(y-this.y)<this.height/2) return true;
+        if(Math.abs(x-this.x)<=this.width/2 && Math.abs(y-this.y)<=this.height/2) return true;
         return false;
     }
 
@@ -72,73 +72,55 @@ class MyRectangle2D{
         ) return true;
         return false;
     }
-
 }
 
 public class C10E13 {
-    public static void main(String []args){
+    public static void main(String []args) throws Exception {
         Scanner input = new Scanner(System.in);
-        System.out.println("Want to start program? (Y to start, other to exit)");
-        String start = input.next();
-        if(start.equals("Y")){
-            outloop:
-            while(true){
-                MyRectangle2D rect = null;
-                System.out.println("Type \"default\" for a default rectangle, Type \"set\" to set a new rectangle, Type \"e\" to exit");
-                String type = input.next();
-                if(type.equals("default") || type.equals("set")){
-                    if(type.equals("default"))rect = new MyRectangle2D();
-                    else if(type.equals("set")){
-                        System.out.println("input new x value");
-                        double x = input.nextDouble();
-                        System.out.println("input new y value");
-                        double y = input.nextDouble();
-                        System.out.println("input new width value");
-                        double w = input.nextDouble();
-                        System.out.println("input new height value");
-                        double h = input.nextDouble();
-                        try{
-                            rect = new MyRectangle2D(x,y,w,h);
-                        }catch (Exception e){
-                            System.out.println("Invalid input, program closed");
-                            break outloop;
-                        }
+        outerloop:
+        while(true){
+            System.out.println("Start program?(Y or N)");
+            String s = input.next();
+            if(s.equals("Y")){
+                middleloop:
+                while(true){
+                    System.out.println("Please input base rectangle");
+                    System.out.println("Input x of center point:");
+                    double x = input.nextDouble();
+                    System.out.println("Input x of center point:");
+                    double y = input.nextDouble();
+                    System.out.println("Input width value");
+                    double w = input.nextDouble();
+                    System.out.println("Input height value");
+                    double h = input.nextDouble();
+                    MyRectangle2D rect;
+                    try{
+                         rect = new MyRectangle2D(x,y,w,h);
+                    }catch (Exception e){
+                        System.out.println("Invalid input, please re-enter.");
+                        break middleloop;
                     }
+                    System.out.println("Start testing:");
                     innerloop:
                     while(true){
-                        System.out.println("Type \"get(X/Y/Width/Height)\" to print value, Type \"set(X/Y/Width/Height)\" to set value, Type \"con\" to continue");
-                        String gsc = input.next();
-                        if(gsc.equals("getX")) System.out.println(rect.getX());
-                        else if(gsc.equals("getY")) System.out.println(rect.getY());
-                        else if(gsc.equals("getWidth")) System.out.println(rect.getWidth());
-                        else if(gsc.equals("getHeight")) System.out.println(rect.getHeight());
-                        else if(gsc.equals("setX") || gsc.equals("setY") || gsc.equals("setWidth") || gsc.equals("setHeight")){
-                            System.out.println("Input the value you want to set");
-                            double temp = input.nextDouble();
-                            if(gsc.equals("setX")) rect.setX(temp);
-                            else if(gsc.equals("setY")) rect.setY(temp);
-                            else if(gsc.equals("setWidth")){
-                                try{
-                                    rect.setWidth(temp);
-                                }catch(Exception e){
-                                    System.out.println("Invalid input");
-                                }
-                            } else{
-                                try{
-                                    rect.setHeight(temp);
-                                }catch(Exception e){
-                                    System.out.println("Invalid input");
-                                }
-                            }
-                        }
-                        else if(gsc.equals("con")) break innerloop;
-                        else System.out.println("Invalid input");
+                        double []testPoint = {3,3};
+                        MyRectangle2D testRect1 = new MyRectangle2D(2,2,5.5,4.9);
+                        MyRectangle2D testRect2 = new MyRectangle2D(3,5,2.3,5.4);
+                        if(rect.contains(testPoint[0],testPoint[1])) System.out.println("TestPoint is in base rectangle.");
+                        else System.out.println("TestPoint is not in base rectangle.");
+                        if(rect.contains(testRect1)) System.out.println("Base rectangle includes testRectangle 1.");
+                        else if(rect.overlaps(testRect1)) System.out.println("Base rectangle overlaps testRectangle 1.");
+                        else System.out.println("Base rectangle distinct testRectangle 1.");
+                        if(rect.contains(testRect2)) System.out.println("Base rectangle includes testRectangle 2.");
+                        else if(rect.overlaps(testRect2)) System.out.println("Base rectangle overlaps testRectangle 2.");
+                        else System.out.println("Base rectangle distinct testRectangle 2.");
+                        break middleloop;
                     }
-                    System.out.println("");
                 }
-                else if(type.equals("e")) break;
-                else System.out.println("Invalid input");
             }
+            System.out.println("Want to end program?(Y or N)");
+            s = input.next();
+            if(s.equals("Y")) break outerloop;
         }
         System.out.println("Program closed.");
     }
