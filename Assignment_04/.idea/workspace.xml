@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d823b949-3f3c-4c2b-9e29-31091d1e8b78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinearEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearEquation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment_04.zip" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment_04.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Screen Shot 2020-03-03 at 7.14.43 PM.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +108,8 @@
       <option name="presentableId" value="Default" />
       <updated>1582250667270</updated>
       <workItem from="1582250668614" duration="12910000" />
-      <workItem from="1583262487792" duration="1863000" />
+      <workItem from="1583262487792" duration="2548000" />
+      <workItem from="1583526461574" duration="442000" />
     </task>
     <servers />
   </component>
@@ -119,7 +121,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
