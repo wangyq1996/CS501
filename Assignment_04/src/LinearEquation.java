@@ -68,30 +68,19 @@ public class LinearEquation {
                 in[i] = input.nextDouble();
             }
             LinearEquation test = new LinearEquation(in[0],in[1],in[2],in[3],in[4],in[5]);
-            while(true){
-                System.out.println("Show one parameter (from a to f), type con to continue");
-                String t = input.next();
-                if(t.equals("con")) break;
-                else if(t.equals("a")) System.out.println(test.getA());
-                else if(t.equals("b")) System.out.println(test.getB());
-                else if(t.equals("c")) System.out.println(test.getC());
-                else if(t.equals("d")) System.out.println(test.getD());
-                else if(t.equals("e")) System.out.println(test.getE());
-                else if(t.equals("f")) System.out.println(test.getF());
-                else System.out.println("Invalid Input");
-            }
-            while(true){
-                System.out.println("Show output (x or y), type e to exit");
-                String output = input.next();
-                if(output.equals("e")) break;
+            System.out.println("The equation is:");
+            System.out.println(test.getA()+"x + "+test.getB()+"y = "+test.getE());
+            System.out.println(test.getC()+"x + "+test.getD()+"y = "+test.getF());
+            System.out.println("Type \"y\" to start calculation, other to exit");
+            String t = input.next();
+            if(t.equals("y")){
                 try{
                     if(!test.isSolvable()) throw new Exception();
-                    if(output.equals("x")) System.out.println(test.getX());
-                    else if(output.equals("y")) System.out.println(test.getY());
-                    else System.out.println("Invalid Input");
+                    System.out.println("The output is:");
+                    System.out.println("x = "+test.getX());
+                    System.out.println("y = "+test.getY());
                 }catch (Exception e){
-                    System.out.println("The equation has no solution.");
-                    break;
+                    System.out.println("This equation is not solvable");
                 }
             }
         }

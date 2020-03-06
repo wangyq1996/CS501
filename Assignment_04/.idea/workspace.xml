@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d823b949-3f3c-4c2b-9e29-31091d1e8b78" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinearEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearEquation.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Calender">
+  <component name="RunManager" selected="Application.LinearEquation">
     <configuration name="Calender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Calender" />
       <module name="Assignment_04" />
@@ -89,9 +89,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LinearEquation" />
         <item itemvalue="Application.Calender" />
         <item itemvalue="Application.Rectangle" />
-        <item itemvalue="Application.LinearEquation" />
         <item itemvalue="Application.IntersectingPoint" />
       </list>
     </recent_temporary>
@@ -107,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582250667270</updated>
       <workItem from="1582250668614" duration="12910000" />
-      <workItem from="1583262487792" duration="1416000" />
+      <workItem from="1583262487792" duration="1863000" />
     </task>
     <servers />
   </component>
