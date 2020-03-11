@@ -103,24 +103,44 @@ public class C10E13 {
                     System.out.println("Start testing:");
                     innerloop:
                     while(true){
-                        double []testPoint = {3,3};
-                        MyRectangle2D testRect1 = new MyRectangle2D(2,2,5.5,4.9);
-                        MyRectangle2D testRect2 = new MyRectangle2D(3,5,2.3,5.4);
-                        if(rect.contains(testPoint[0],testPoint[1])) System.out.println("TestPoint is in base rectangle.");
-                        else System.out.println("TestPoint is not in base rectangle.");
-                        if(rect.contains(testRect1)) System.out.println("Base rectangle includes testRectangle 1.");
-                        else if(rect.overlaps(testRect1)) System.out.println("Base rectangle overlaps testRectangle 1.");
-                        else System.out.println("Base rectangle distinct testRectangle 1.");
-                        if(rect.contains(testRect2)) System.out.println("Base rectangle includes testRectangle 2.");
-                        else if(rect.overlaps(testRect2)) System.out.println("Base rectangle overlaps testRectangle 2.");
-                        else System.out.println("Base rectangle distinct testRectangle 2.");
-                        break middleloop;
+                        System.out.println("Want to test Point or Rectangle?(P for point, R for rectangle)");
+                        String test = input.next();
+                        if(test.equals("P")){
+                            double []testPoint = new double [2];
+                            System.out.println("Input x of Test point:");
+                            testPoint[0] = input.nextDouble();
+                            System.out.println("Input y of Test point:");
+                            testPoint[1] = input.nextDouble();
+                            if(rect.contains(testPoint[0],testPoint[1])) System.out.println("TestPoint is in base rectangle.");
+                            else System.out.println("TestPoint is not in base rectangle.");
+                        }else if(test.equals("R")){
+                            double []testRectArr = new double[4];
+                            System.out.println("Input x of Test Rectangle:");
+                            testRectArr[0] = input.nextDouble();
+                            System.out.println("Input y of Test Rectangle:");
+                            testRectArr[1] = input.nextDouble();
+                            System.out.println("Input width of Test Rectangle:");
+                            testRectArr[2] = input.nextDouble();
+                            System.out.println("Input height of Test Rectangle:");
+                            testRectArr[3] = input.nextDouble();
+                            try{
+                                MyRectangle2D testRect = new MyRectangle2D(testRectArr[0],testRectArr[1],testRectArr[2],testRectArr[3]);
+                                if(rect.contains(testRect)) System.out.println("Base rectangle includes testRectangle.");
+                                else if(rect.overlaps(testRect)) System.out.println("Base rectangle overlaps testRectangle.");
+                                else System.out.println("Base rectangle distinct testRectangle.");
+                            }catch (Exception e) {
+                                System.out.println("Invalid Input");
+                            }
+                        }else System.out.println("Invalid Input");
+                        System.out.println("Exit?(e to exit)");
+                        String i = input.next();
+                        if(i.equals("e")) break middleloop;
                     }
                 }
             }
             System.out.println("Want to end program?(Y or N)");
             s = input.next();
-            if(s.equals("Y")) break outerloop;
+            if(s.equals("Y")) break;
         }
         System.out.println("Program closed.");
     }
